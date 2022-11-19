@@ -1103,6 +1103,27 @@ section#contact .information {
       top: 0px;
   }
   
+.navbar-mobile ul {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  background: #232323;
+}
+
+#header.navbar-mobile .navbar {
+  max-width: 100%;
+  background: transparent;
+}
+.navbar-mobile ul li  {
+  color: #fff;
+  border-bottom: 3px solid #fff;
+  width: 100%;
+}
+
+.navbar-mobile ul li a {
+  color: #fff;
+
+}
   a.cta-btn.getfreecallback.scrollto {
     max-width: 252px;
     /* margin-top: 15px; */
