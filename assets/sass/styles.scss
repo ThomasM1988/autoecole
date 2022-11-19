@@ -1,12 +1,17 @@
-/**
-* Template Name: Auto-école Moderne front - v1.0.0
-* Template URL: -01
-* Author: dev-evoluer.com
-*/
 
-/*--------------------------------------------------------------
-# Fonts
---------------------------------------------------------------*/
+$color_primary:#009EE0;
+$color_secondry:#D32727;
+$text_body :"Open Sans", sans-serif;
+$font_title:"Anton",  sans-serif;
+$color_text_body:#ffffff;
+$fond_secondry_site:#1b1b1b;
+$bg_global:#232323;
+$size_bouton:14px;
+$size_title1 :37px;
+$space_line_title1:33px;
+$size_title2 :19px;
+$btn_footer:#ffffff;
+
 @font-face {
   font-family: 'Anton';
   src: url(../fonts/Anton-Regular.eot);
@@ -21,19 +26,30 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+h1,h2,h3,h4,h5,h6{
+    font-family: $font_title;
+    color:$color_text_body;
+}
+h1{
+   font-size: $size_title1;
+   line-height: $space_line_title1;
+}
+h2{
+    font-size:$size_title2
+}
 body {
-  font-family: "Anton", "Open Sans", sans-serif;
-  color: #ffffff;
+  font-family: $text_body ;
+  color: $color_text_body;
   overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
-  color: #009EE0;
+  color: $color_primary;
 }
 
 a:hover {
-  color: #D32727;
+  color: $color_primary;
   text-decoration: none;
 }
 
@@ -48,7 +64,7 @@ a:hover {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #009EE0;
+  background: $color_primary;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -57,13 +73,13 @@ a:hover {
 
 .back-to-top i {
   font-size: 24px;
-  color: #fff;
+  color: $color_text_body;
   line-height: 0;
 }
 
 .back-to-top:hover {
-  background: #D32727;
-  color: #fff;
+  background: $color_secondry;
+  color: $color_text_body;
 }
 
 .back-to-top.active {
@@ -97,10 +113,9 @@ a:hover {
 #header .contact-info {
   font-size: 24px;
   line-height: 22px;
-  color: #ffffff;
+  color: $color_text_body;
   transition: 0.3s;
   cursor: pointer;
-  font-family: "Open Sans", sans-serif;
   position: fixed;
   z-index: 11111;
   top: 20px;
@@ -111,17 +126,17 @@ a:hover {
 }
 #header .contact-info a {
   line-height: 0;
-  color: #ffffff;
+  color: $color_text_body;
   transition: 0.3s;
   cursor: pointer;
 }
 
 #header .contact-info a:hover {
-  color: #ffffff;
+  color: $color_text_body;
 }
 
 #header .contact-info i {
-  color: #ffffff;
+  color: $color_text_body;
   line-height: 0;
   margin-right: 5px;
 }
@@ -143,7 +158,7 @@ a:hover {
 }
 
 #header .logo a {
-    color: #ffffff;
+    color: $color_text_body;
     display: inline-block;
     text-align: right;
     padding-top: 16px;
@@ -158,7 +173,6 @@ a:hover {
   font-size: 12px;
   margin-top: 2px;
   font-weight: 300;
-  font-family: "Open Sans", sans-serif;
   display: block;
 }
 
@@ -185,7 +199,7 @@ a:hover {
 	right: -15px;
 	margin-top: 0;
 	height: 52px;
-	background: #0098DE;
+	background: $color_primary;
 	transform: skew(-30deg);
 	z-index: 10000;
 }
@@ -209,7 +223,7 @@ a:hover {
   justify-content: space-between;
   padding: 10px 0 10px 30px;
   font-size: 15px;
-  color: #ffffff;
+  color: $color_text_body;
   white-space: nowrap;
   transition: 0.3s;
   transform: skew(30deg)
@@ -231,14 +245,14 @@ a:hover {
 
 .navbar .getfreecallback,
 .navbar .getfreecallback:focus {
-	color: #ffffff;
+	color: $color_text_body;
 	padding: 0 25px;
 	margin-left: 30px;
 	border-radius: 0;
 	border: none;
 	transition: 0.3s;
-	font-size: 14px;
-	background: #D32727;
+	font-size: $size_bouton;
+	background: $color_secondry;
 	height: 51px;
 	transform: skew(0);
 }
@@ -248,8 +262,8 @@ a:hover {
 
 .navbar .getfreecallback:hover,
 .navbar .getfreecallback:focus:hover {
-  background: #009EE0;
-  color: #fff;
+  background: $color_primary;
+  color: $color_text_body;
 }
 
 .navbar .dropdown ul {
@@ -262,7 +276,7 @@ a:hover {
   z-index: 99;
   opacity: 0;
   visibility: hidden;
-  background: #fff;
+  background: $color_text_body;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   transition: 0.3s;
 }
@@ -283,7 +297,7 @@ a:hover {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: #009EE0;
+  color: $color_primary;
 }
 
 .navbar .dropdown:hover>ul {
@@ -305,21 +319,12 @@ a:hover {
   visibility: visible;
 }
 
-@media (max-width: 1366px) {
-  .navbar .dropdown .dropdown ul {
-    left: -90%;
-  }
-
-  .navbar .dropdown .dropdown:hover>ul {
-    left: -100%;
-  }
-}
 
 /**
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #ffffff;
+  color: $color_text_body;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -327,7 +332,7 @@ a:hover {
   transition: 0.5s;
 }
 .mobile-nav-toggle > span {
-    color: #ffffff;
+    color: $color_text_body;
     font-size: 8px;
     cursor: pointer;
     display: block;
@@ -339,61 +344,9 @@ a:hover {
 }
 
 .mobile-nav-toggle.bi-x {
-  color: #fff;
+  color: $color_text_body;
 }
 
-@media (max-width: 991px) {
-	#header .logo {
-		left: 0;
-		right: 0;
-		align-items: center;
-		justify-content: center;
-		display: flex;
-	}
-	#header .contact-info {
-    font-size: 22px;
-    line-height: 12px;
-    top: 8px;
-}
-  #header.navbar-mobile {
-    height: auto;
-	}
-	#header.navbar-mobile .navbar {
-		width: 100vw;
-		height: 100vh;
-	}
-	#header.navbar-mobile .logo,
-	#header.navbar-mobile .contact-info{
-		display: none!important;
-	}
-  .mobile-nav-toggle {
-    display: block;
-  }
-	.navbar {
-		padding: 0;
-		position: relative;
-		right: auto;
-		margin-bottom: auto;
-		background: #0098DE;
-		transform: skew(0deg);
-	}
-	#header.navbar-mobile .navbar {
-		background: transparent;
-	}
-	#header:not(.fixed-top) .navbar {
-		margin-top: -104px;
-	}
-  .navbar ul {
-    display: none;
-  }
-  .navbar a, .navbar a:focus {
-    transform: skew(0deg);
-	}
-	.navbar .getfreecallback > * {
-		transform: skew(0deg);
-	}
-	
-}
 
 .navbar-mobile {
   position: fixed;
@@ -417,7 +370,7 @@ a:hover {
   display: block;
   position: relative;
   padding: 10px 0;
-  background-color: #fff;
+  background-color: $color_text_body;
   overflow-y: auto;
   transition: 0.3s;
   width: 100%;
@@ -433,7 +386,7 @@ a:hover {
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #009EE0;
+  color: $color_primary;
 }
 
 .navbar-mobile .getfreecallback,
@@ -449,7 +402,7 @@ a:hover {
   z-index: 99;
   opacity: 1;
   visibility: visible;
-  background: #fff;
+  background: $color_text_body;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
 }
 
@@ -468,7 +421,7 @@ a:hover {
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover>a {
-  color: #009EE0;
+  color: $color_primary;
 }
 
 .navbar-mobile .dropdown>.dropdown-active {
@@ -521,7 +474,7 @@ a:hover {
 }
 
 #hero h2 {
-  color: #fff;
+  color: $color_text_body;
   margin-bottom: 20px;
   font-size: 48px;
   font-weight: 700;
@@ -531,7 +484,7 @@ a:hover {
   -webkit-animation-delay: 0.4s;
   animation-delay: 0.4s;
   margin: 0 auto 30px auto;
-  color: #fff;
+  color: $color_text_body;
 }
 
 #hero .carousel-inner .carousel-item {
@@ -578,7 +531,7 @@ a:hover {
 
 #hero .carousel-indicators li {
   cursor: pointer;
-  background: #fff;
+  background: $color_text_body;
   overflow: hidden;
   border: 0;
   width: 12px;
@@ -590,27 +543,27 @@ a:hover {
 
 #hero .carousel-indicators li.active {
   opacity: 1;
-  background: #009EE0;
+  background: $color_primary;
 }
 
 #hero .btn-get-started {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: $size_bouton;
   letter-spacing: 1px;
   display: inline-block;
   padding: 14px 32px;
   border-radius: 4px;
   transition: 0.5s;
   line-height: 1;
-  color: #fff;
+  color: $color_text_body;
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
-  background: #009EE0;
+  background: $color_primary;
 }
 
 #hero .btn-get-started:hover {
-  background: #D32727;
+  background: $color_secondry;
 }
 
 #hero .carousel-control-prev,
@@ -619,44 +572,20 @@ a:hover {
     padding: 0 0 52px;
     width: auto;
 }
-@media (max-width: 992px) {
-  #hero {
-    height: 100vh;
-  }
-
-  #hero .carousel-container {
-    top: 66px;
-  }
-}
-
-@media (max-width: 768px) {
-  #hero h2 {
-    font-size: 28px;
-  }
-}
-
-
-@media (max-height: 500px) {
-  #hero {
-    height: 100vh;
-  }
-}
 
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
 section {
   padding: 60px 60px;
-  background-color: #232323;
+  background-color: $bg_global;
 }
-section p {
-    font-family: "Open Sans", sans-serif;
-}
+
 .section-bg {
-  background-color: #232323;
+  background-color: $bg_global;
 }
 .color-blue {
-  color:#009EE0;
+  color:$color_primary;
 }
 
 
@@ -666,22 +595,20 @@ section p {
 --------------------------------------------------------------*/
 .cta-btn,
 .cta-btn:focus {
-	color: #ffffff;
+	color: $color_text_body;
 	/* padding: 0 30px; */
 	border-radius: 0;
 	border: none;
 	transition: 0.3s;
-	font-size: 14px;
-	background: #D32727;
+	font-size: $size_bouton;
+	background: $color_secondry;
 	height: 51px;
 	transform: skew(-30deg);
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	max-width: 211px;
-	float: right;
-	width: 100%;
-	margin-right: 5%;
+    width: 100%;
 }
 .cta-btn > * {
 	transform: skew(30deg);
@@ -689,16 +616,14 @@ section p {
 
 .cta-btn:hover,
 .cta-btn:focus:hover {
-  background: #009EE0;
-  color: #fff;
+  background: $color_primary;
+  color: $color_text_body;
 }
 /*--------------------------------------------------------------
 # About Us
 --------------------------------------------------------------*/
 .about .content h1 {
   font-weight: 700;
-  font-size: 37px;
-  line-height: 33px;
   margin-bottom: 60px;
 }
 
@@ -714,7 +639,7 @@ section p {
 .about .content ul i {
   font-size: 20px;
   padding-right: 4px;
-  color: #009EE0;
+  color: $color_primary;
 }
 
 .about .content p:last-child {
@@ -730,10 +655,9 @@ section p {
 
 section.contact{
 	padding: 0;
-	background: #1b1b1b;
+
 }
 .contact h2{
-	font-size: 19px;
 	font-weight: 400;
 	margin-bottom: 20px;
 }
@@ -745,24 +669,24 @@ section.contact{
 .contact .ouverture
 {
 	padding: 60px;
-  z-index: 99999;
+  z-index: 9;
 }
 .contact .ouverture > *
 {
 	transform: skew(15deg);
 }
 .contact .info {
-  border-top: 3px solid #009EE0;
-  border-bottom: 3px solid #009EE0;
+  border-top: 3px solid $color_primary;
+  border-bottom: 3px solid $color_primary;
   padding: 30px;
-  background: #fff;
+  background: $color_text_body;
   width: 100%;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
 }
 
 .contact .info i {
   font-size: 20px;
-  color: #009EE0;
+  color: $color_primary;
   float: left;
   width: 44px;
   height: 44px;
@@ -784,7 +708,7 @@ section.contact{
 .information:before ,.ouverture:before,.acces::before{
   position: absolute;
 
-  background: #009EE0;
+  background: $color_primary;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -795,7 +719,7 @@ section.contact{
   left: 0;
   right: 0;
   margin: 0 auto;
-  border:3px solid #fff;
+  border:3px solid $color_text_body;
   font-family: bootstrap-icons !important;
   font-size: 23px;
 }
@@ -839,7 +763,7 @@ section.contact{
 .contact .info p {
   padding: 0 0 10px 60px;
   margin-bottom: 20px;
-  font-size: 14px;
+  font-size: $size_bouton;
   color: #555555;
 }
 
@@ -851,7 +775,7 @@ section.contact{
   font-size: 18px;
   display: inline-block;
   background: #333;
-  color: #fff;
+  color: $color_text_body;
   line-height: 1;
   padding: 8px 0;
   border-radius: 50%;
@@ -863,15 +787,15 @@ section.contact{
 }
 
 .contact .info .social-links a:hover {
-  background: #009EE0;
-  color: #fff;
+  background: $color_primary;
+  color: $color_text_body;
 }
 
 .contact .info .email:hover i,
 .contact .info .address:hover i,
 .contact .info .phone:hover i {
-  background: #009EE0;
-  color: #fff;
+  background: $color_primary;
+  color: $color_text_body;
 }
 
 
@@ -901,42 +825,35 @@ section.contact{
 --------------------------------------------------------------*/
 #footer {
   background: #090909;
-  color: #fff;
-  font-size: 14px;
+  color: $color_text_body;
+  font-size: $size_bouton;
   text-align: center;
   padding: 30px 0 0;
-  font-family: "Open Sans", sans-serif;
 }
-#footer .col-md-4 a{
-  color: #fff;
-  font-size: 14px;
+#footer  a{
+  color: $color_text_body;
+  font-size: $size_bouton;
   text-align: left;
-  display: block;
 }
-
+#footer  a:hover{
+    color:$color_primary;
+}
 #footer h3 {
   font-size: 36px;
   font-weight: 700;
-  color: #fff;
+  color: $color_text_body;
   position: relative;
-  font-family: "Open Sans", sans-serif;
   padding: 0;
   margin: 0 0 15px 0;
 }
 
-/* #footer p {
-  font-size: 15px;
-  font-style: italic;
-  padding: 0;
-  margin: 0 0 40px 0;
-} */
 
 #footer .logo {
 	font-family: "Anton", "Open Sans", sans-serif;
 	width: fit-content;
 }
 #footer .logo a {
-    color: #ffffff;
+    color: $color_text_body;
     display: inline-block;
     text-align: right;
     padding-top: 16px;
@@ -951,13 +868,11 @@ section.contact{
   font-size: 12px;
   margin-top: 2px;
   font-weight: 300;
-  font-family: "Open Sans", sans-serif;
   display: block;
 }
 
 #footer .logo img {
     display: inline-block;
-    float: left;
     margin-right: 20px;
     width: 100%;
     max-width: 115px;
@@ -968,29 +883,183 @@ section.contact{
 }
 
 #footer .credits {
-    font-size: 14px;
+    font-size: $size_bouton;
     height: 56px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #0098DE;
+    background: $color_primary;
 }
 #footer .credits a{
-    color: #ffffff;
+    color: $color_text_body;
 }
 #footer > .container{
 	margin-bottom: 20px;
 }
 input#newslter {
-  background: #3f3f3f;
+  background: $bg_global;
   padding: 8px;
   border: none;
-  color: #fff;
+  color: $color_text_body;
 }
 
 input#newslter::placeholder {
-  color: #fff;
+  color: $color_text_body;
   text-align: center;
   font-size: 15px;
-  font-family: 'Open Sans';
 }
+/*---------------------------------------
+     Media pour mobile et table 
+
+     --------------------- */
+  
+@media (max-width: 1366px) {
+    .navbar .dropdown .dropdown ul {
+      left: -90%;
+    }
+  
+    .navbar .dropdown .dropdown:hover>ul {
+      left: -100%;
+    }
+  }
+  @media (max-width: 991px) {
+	#header .logo {
+		left: 0;
+		right: 0;
+		align-items: center;
+		justify-content: center;
+		display: flex;
+	}
+	#header .contact-info {
+    font-size: 22px;
+    line-height: 12px;
+    top: 8px;
+}
+  #header.navbar-mobile {
+    height: auto;
+	}
+	#header.navbar-mobile .navbar {
+		width: 100vw;
+		height: 100vh;
+	}
+	#header.navbar-mobile .logo,
+	#header.navbar-mobile .contact-info{
+		display: none!important;
+	}
+  .mobile-nav-toggle {
+    display: block;
+  }
+	.navbar {
+		padding: 0;
+		position: relative;
+		right: auto;
+		margin-bottom: auto;
+		background: $color_primary;
+		transform: skew(0deg);
+	}
+	#header.navbar-mobile .navbar {
+		background: transparent;
+	}
+	#header:not(.fixed-top) .navbar {
+		margin-top: -104px;
+	}
+  .navbar ul {
+    display: none;
+  }
+  .navbar a, .navbar a:focus {
+    transform: skew(0deg);
+	}
+	.navbar .getfreecallback > * {
+		transform: skew(0deg);
+	}
+	
+
+    #hero {
+      height: 100vh;
+    }
+  
+    #hero .carousel-container {
+      top: 66px;
+    }
+    #footer .logo {
+        margin: 0 auto 15px;
+    }
+  }
+  @media(min-width:768px){
+    .cta-btn, .cta-btn:focus{
+        float: right;
+    margin-right: 5%;
+    }
+    #footer .logo {
+        display: flex;
+        align-items: center;
+    }
+    .information i, .ouverture i , .acces i{
+        display: none;
+    }
+ }
+  @media (max-width: 767px) {
+    section.contact{
+        overflow: hidden;
+    }
+    #hero h2 {
+      font-size: 28px;
+    }
+    .hiddenonlyxs{
+        display: none;
+    }
+    #footer .cta-btn {
+        background-color: $btn_footer;
+        color:$bg_global;
+        font-family: $font_title;
+        font-size: 17px;
+    }
+    .contact .ouverture{
+        background: $fond_secondry_site;
+    }
+    .contact .ouverture:after{
+      display: none;
+    }
+    .cta-btn, .cta-btn:focus{
+    margin: 0 auto;
+    }
+    #footer .logo img {
+        display: block;
+        margin: 0 auto;
+    }
+    .information:before, .ouverture:before, .acces::before{
+display: none;
+    }
+    .contact .ouverture {
+        padding: 15px 60px;
+   
+    }
+    .information , .ouverture  , .acces{
+        text-align:center;
+    }
+    .information i, .ouverture i , .acces i{
+    background: $color_primary;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border: 3px solid #ffffff;
+    font-size: 25px;
+    margin-bottom: 25px;
+    
+    }
+    .contact .ouverture > *{
+        transform: none;
+    }
+  }
+  
+  
+  @media (max-height: 500px) {
+    #hero {
+      height: 100vh;
+    }
+  }
+  
