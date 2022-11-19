@@ -94,7 +94,7 @@ a:hover {
 	background: rgba(0, 0, 0, 0.6);
 	transition: all 0.5s;
 	z-index: 998;
-	height: 70px;
+
 	position: fixed;
 	top: 0px;
 	left: 0;
@@ -433,7 +433,7 @@ a:hover {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 70vh;
+  height: 100vh;
   background-color: rgba(9, 9, 9, 0.8);
   overflow: hidden;
   position: relative;
@@ -901,6 +901,11 @@ input#newslter {
   padding: 8px;
   border: none;
   color: $color_text_body;
+  width: 50%;
+  height: 51px;
+  -webkit-transform: skew(-20deg);
+  -moz-transform: skew(-20deg);
+  -o-transform: skew(-20deg);
 }
 
 input#newslter::placeholder {
@@ -908,6 +913,18 @@ input#newslter::placeholder {
   text-align: center;
   font-size: 15px;
 }
+
+
+section#contact button.cta-btn {
+  width: 48%;
+  margin-left: -15px;
+  background-color: $color_primary;
+}
+section#contact button.cta-btn:hover{
+  background-color: $color_secondry;
+}
+
+
 /*---------------------------------------
      Media pour mobile et table 
 
@@ -923,6 +940,32 @@ input#newslter::placeholder {
     }
   }
   @media (max-width: 991px) {
+    #header .logo img {
+      margin: 0 auto;
+      text-align: center;
+      float: none;
+      display: block;
+  }
+  .hiddenlg {
+    display: none !important;
+  }
+    nav#navbar {
+      max-width: 37px;
+
+  }
+  
+  .noflex {
+      padding-top: 15px;
+  }
+    .hiddenxs-md{
+      display: none;
+    }
+    section#contact {
+      margin-top: -2px;
+  }
+input#newslter {
+  background: #3f3f3f;
+}
 	#header .logo {
 		left: 0;
 		right: 0;
@@ -930,6 +973,20 @@ input#newslter::placeholder {
 		justify-content: center;
 		display: flex;
 	}
+  .contact .ouverture:after {
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -81px;
+    z-index: -1;
+
+    -ms-transform: skew(-30deg, 0deg);
+    -webkit-transform: skew(-30deg, 0deg);
+    transform: skew(-18deg, 0deg);
+}
 	#header .contact-info {
     font-size: 22px;
     line-height: 12px;
@@ -960,9 +1017,7 @@ input#newslter::placeholder {
 	#header.navbar-mobile .navbar {
 		background: transparent;
 	}
-	#header:not(.fixed-top) .navbar {
-		margin-top: -104px;
-	}
+
   .navbar ul {
     display: none;
   }
@@ -985,7 +1040,16 @@ input#newslter::placeholder {
         margin: 0 auto 15px;
     }
   }
+  @media(min-width:991px){
+    .visblexs{
+      display: none;
+    }
+  }
   @media(min-width:768px){
+    
+section#contact .information {
+  padding: 60px 18px;
+}
     .cta-btn, .cta-btn:focus{
         float: right;
     margin-right: 5%;
@@ -997,11 +1061,101 @@ input#newslter::placeholder {
     .information i, .ouverture i , .acces i{
         display: none;
     }
+    
+    section.contact{
+      
+      background: $fond_secondry_site;
+  }
+ }
+ @media(min-width:768px) and (max-width:991px){
+  .information:before, .ouverture:before, .acces::before {
+    width: 65px;
+    height: 65px;
+  }
+  .information:before{
+    display: none;
+  }
+  section.contact{
+    background: $bg_global;
+  }
+  .information i{
+    display: block;
+    background: $color_primary;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border: 3px solid #ffffff;
+    font-size: 25px;
+    margin-bottom: 25px;
+    
+    }
  }
   @media (max-width: 767px) {
+    #header .logo {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      top: 0px;
+  }
+  
+  a.cta-btn.getfreecallback.scrollto {
+    max-width: 252px;
+    /* margin-top: 15px; */
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 25px;
+    padding-top: 0px;
+}
+
+  
+  header#header {
+      padding-top: 0px;
+  }
+  
+  header#header {
+      display: block !important;
+      background: #232323;
+  }
+  
+  .noflex {
+      display: block !important;
+  }
+  
+  a.getfreecallback.scrollto {
+      display: block;
+      padding-top: 24px;
+  }
+  
+  #header .logo a small {
+      text-align: center;
+  }
+    #header .contact-info {
+      position: relative;
+      top: 0;
+      text-align: center;
+margin: 25px auto;
+      align-items: end;
+      display: block;
+      width: 100%;
+  }
+
+    input#newslter {
+      display: inline-block;
+      float: left;
+  }
     section.contact{
-        overflow: hidden;
+      overflow: hidden;
     }
+
     #hero h2 {
       font-size: 28px;
     }
@@ -1054,6 +1208,38 @@ display: none;
     .contact .ouverture > *{
         transform: none;
     }
+    input#newslter {
+      display: inline-block;
+      float: left;
+  }
+  
+  input#newslter {
+      background: #3f3f3f;
+  }
+  
+  .ouverture i {
+      position: relative;
+      top: -47px;
+      margin-bottom: 0px;
+  }
+  
+  .contact .ouverture {
+      padding-top: 0px;
+  }
+  
+  .information {
+      padding-top: 15px !important;
+      padding-bottom: 89px !important;
+  }
+  
+  section#about {
+      padding-bottom: 15px;
+  }
+  
+  section#contact button.cta-btn {
+      margin-left: -17px;
+      display: initial;
+  }
   }
   
   
